@@ -3,7 +3,7 @@ from json import JSONDecodeError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from vehicules import Voiture, Bateau, Avion, Moto, v1, v2, v3, v4, v5, b1, b2, m1, m2, m3, a1
+from vehicules import Voiture, Bateau, Avion, Moto, v2, v3, v5, a1
 
 app = FastAPI()
 
