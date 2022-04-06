@@ -64,7 +64,7 @@ def getNombreBateaux():
 #5ème route : Une route qui va permettre de retrouver un véhicule par différent moyen(name, nombre km etc...)
 @app.get('/km=20000')
 def getNombreBateaux():
-    return "Voici les véhicules ayant 20000km : ", {v2, v3, v4, v5, a1}
+    return "Voici les véhicules ayant 20000km : ", {v2, v3, v5, a1}
 
 @app.exception_handler(StarletteHTTPException)
 async def http_exception_handler(request: Request, exc: StarletteHTTPException):

@@ -11,7 +11,7 @@ class Voiture:
 v1 = Voiture("Serie 1", "BMW", 250, 40000, "rouge")
 v2 = Voiture("Serie 2", "BMW", 150, 20000, "noire")
 v3 = Voiture("Serie 3", "BMW", 150, 20000, "noire")
-v4 = Voiture("Serie 4", "BMW", 150, 20000, "noire")
+v4 = Voiture("Serie 4", "BMW", 150, 10000, "noire")
 v5 = Voiture("Serie 5", "BMW", 150, 20000, "noire")
 
 class Bateau:
