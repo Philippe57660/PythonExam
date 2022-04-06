@@ -1,1 +1,1 @@
-"# Examen python, installer les extensions puis exacuter python -m uvicorn main:app --reload" 
+"# Examen python, installer les extensions pip, uvicorn et fastAPI puis executer 'python -m uvicorn main:app --reload'" 
