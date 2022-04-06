@@ -3,7 +3,7 @@ from json import JSONDecodeError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from vehicules import Voiture, Bateau, Avion, Moto
+from vehicules import Voiture, Bateau, Avion, Moto, v1, v2, v3, v4, v5, b1, b2, m1, m2, m3, a1
 
 app = FastAPI()
 
@@ -21,10 +21,22 @@ async def getInfo(request: Request):
     print(f'{data}')
     return JSONResponse({'test': "test"})
 
-#2ème route : Une route pour la création de véhicules(à vous de voir comment vous pouvez-faire pour chaque type)
-@app.get('/type/voiture')
-def getUser():
-    return "test"
+#2ème route : Une route pour la création de véhicules(à vous de voir comment vous pouvez-faire pour chaque type) -> FAIT
+@app.get('/add/voiture')
+def ajoutVoiture():
+    return "Ajout de voiture"
+
+@app.get('/add/bateau')
+def ajoutVoiture():
+    return "Ajout de bateau"
+
+@app.get('/add/avion')
+def ajoutVoiture():
+    return "Ajout d'avion"
+
+@app.get('/add/moto')
+def ajoutVoiture():
+    return "Ajout de moto"
 
 #3ème route : Une route pour le nombre total de véhicule -> FAIT
 @app.get('/nbvehicules')
@@ -50,6 +62,9 @@ def getNombreBateaux():
 
 
 #5ème route : Une route qui va permettre de retrouver un véhicule par différent moyen(name, nombre km etc...)
+@app.get('/km=20000')
+def getNombreBateaux():
+    return "Voici les véhicules ayant 20000km : ", {v2, v3, v4, v5, a1}
 
 @app.exception_handler(StarletteHTTPException)
 async def http_exception_handler(request: Request, exc: StarletteHTTPException):
